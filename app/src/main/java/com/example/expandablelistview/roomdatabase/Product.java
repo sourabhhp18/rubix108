@@ -21,5 +21,5 @@ public class Product implements Serializable {
     private String finishBy;
 
     @ColumnInfo(name = "finished")
-    private boolean finished;
+    private boolean finished
 }
