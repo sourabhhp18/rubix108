@@ -7,7 +7,7 @@ import androidx.room.InvalidationTracker;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 
-@Database(entities = {Product.class}, version = 1)
+@Database(entities = {Product.class}, version =1)
 public abstract class AppDatabase extends RoomDatabase {
     public abstract ProductDao taskDao();
 }

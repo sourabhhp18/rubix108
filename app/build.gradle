@@ -38,6 +38,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.github.aakira:expandable-layout:1.6.0@aar'
     //support design
     implementation "com.android.support:design:$support_version"
 

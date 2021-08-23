@@ -5,7 +5,17 @@
       <map>
         <entry key="..\:/Users/admin/AndroidStudioProjects/ExpandableListview/app/src/main/res/layout/activity_main.xml" value="0.11639492753623189" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14895833333333333" />
+        <entry key="app/src/main/res/drawable/ic_baseline_keyboard_arrow_down_24.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/drawable/ic_baseline_keyboard_arrow_up_24.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.14895833333333333" />
+        <entry key="app/src/main/res/drawable/selector_section_toggle.xml" value="0.14895833333333333" />
+        <entry key="app/src/main/res/drawable/theme_color.xml" value="0.14895833333333333" />
+        <entry key="app/src/main/res/drawable/triangle.xml" value="0.27395833333333336" />
+        <entry key="app/src/main/res/drawable/white.xml" value="0.27395833333333336" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15" />
+        <entry key="app/src/main/res/layout/layout_header.xml" value="0.1328125" />
+        <entry key="app/src/main/res/layout/layout_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/recycler_view_list.xml" value="0.2578125" />
       </map>
     </option>
   </component>
