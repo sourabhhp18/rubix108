@@ -39,10 +39,10 @@ public class BrandedExpandableGridAdapter extends RecyclerView.Adapter<BrandedEx
 
     public BrandedExpandableGridAdapter(Context context, ArrayList<Object> dataArrayList,
                                         final GridLayoutManager gridLayoutManager, ItemClickListener itemClickListener,
-                                        BrandStateChangeListener sectionStateChangeListener) {
+                                        BrandStateChangeListener brandStateChangeListener) {
         mContext = context;
         mItemClickListener = itemClickListener;
-        mBrandStateChangeListener = sectionStateChangeListener;
+        mBrandStateChangeListener = brandStateChangeListener;
         mDataArrayList = dataArrayList;
 
         gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {

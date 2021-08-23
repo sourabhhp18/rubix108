@@ -14,12 +14,9 @@ public class Products {
 
     private byte[] productImage;
 
-    public Products(String productName) {
-
+    public Products(String productName,int id) {
+        this.id = id;
         this.productName = productName;
-
-
-
     }
 
     public int getId() {

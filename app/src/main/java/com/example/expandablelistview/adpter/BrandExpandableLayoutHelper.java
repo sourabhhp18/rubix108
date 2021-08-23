@@ -52,10 +52,13 @@ public class BrandExpandableLayoutHelper implements BrandStateChangeListener {
         mBrandedExpandableGridAdapter.notifyDataSetChanged();
     }
 
+
+
+
     public void addBrand(String brand, ArrayList<Products> items) {
-        Brand newSection;
-        mBrandMap.put(brand, (newSection = new Brand()));
-        mBrandDataMap.put(newSection, items);
+        Brand newBrand;
+        mBrandMap.put(brand, (newBrand = new Brand(brand)));
+        mBrandDataMap.put(newBrand, items);
     }
 
     public void addProduct(String brand, Products products) {

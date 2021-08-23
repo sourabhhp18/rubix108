@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.example.expandablelistview.R;
 import com.example.expandablelistview.adpter.BrandExpandableLayoutHelper;
 import com.example.expandablelistview.interfaces.ItemClickListener;
+import com.example.expandablelistview.model.Brand;
 import com.example.expandablelistview.model.Products;
 import com.example.expandablelistview.roomdatabase.DatabaseClient;
 import com.example.expandablelistview.roomdatabase.Product;
@@ -23,7 +24,7 @@ import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ItemClickListener {
     RecyclerView mRecylerview;
 
     private ArrayList<Products> products_l;
@@ -38,8 +39,34 @@ public class MainActivity extends AppCompatActivity {
        /* mRecylerview.addItemDecoration(new DividerItemDecoration(this,0));
         mRecylerview.setLayoutManager(new LinearLayoutManager(this));*/
         brandExpandableLayoutHelper = new BrandExpandableLayoutHelper(this,
-                mRecylerview, (com.example.expandablelistview.interfaces.ItemClickListener) this, 3);
-        saveProducts();
+                mRecylerview,this, 3);
+
+
+        ArrayList<Products> arrayList = new ArrayList<>();
+        arrayList.add(new Products("iPhone",0));
+        arrayList.add(new Products("iPad",1));
+        arrayList.add(new Products("iPod",2));
+        arrayList.add(new Products("iMac",3));
+        brandExpandableLayoutHelper.addBrand("Apple",arrayList);
+
+        arrayList = new ArrayList<>();
+        arrayList.add(new Products("LG", 0));
+        arrayList.add(new Products("Apple", 1));
+        arrayList.add(new Products("Samsung", 2));
+        arrayList.add(new Products("Motorola", 3));
+        arrayList.add(new Products("Sony", 4));
+        arrayList.add(new Products("Nokia", 5));
+        brandExpandableLayoutHelper.addBrand("Companies", arrayList);
+        arrayList = new ArrayList<>();
+        arrayList.add(new Products("Chocolate", 0));
+        arrayList.add(new Products("Strawberry", 1));
+        arrayList.add(new Products("Vanilla", 2));
+        arrayList.add(new Products("Butterscotch", 3));
+        arrayList.add(new Products("Grape", 4));
+        brandExpandableLayoutHelper.addBrand("Ice cream", arrayList);
+
+        brandExpandableLayoutHelper.notifyDataSetChanged();
+       // saveProducts();
     }
 
     private byte[] byteImage() {
@@ -121,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
                 super.onPostExecute(products);
                 Log.e("total list", "" + products.toString());
                 Log.e(" list size", "" + products.size());
-products_l=new ArrayList<Products>(products);
+products_l= new ArrayList<Products>(products);
             }
         }
 
@@ -147,9 +174,8 @@ products_l=new ArrayList<Products>(products);
                 super.onPostExecute(brands);
                 Log.e("total list", "" + brands.toString());
                 Log.e(" list size", "" + brands.size());
-                   for(int i=0;i<=brands.size();i++){
-                       brandExpandableLayoutHelper.addBrand(brands.get(i).getProductBrand(), getProducts(brands.get(i).getProductBrand()));
-                   }
+
+
             }
         }
 
@@ -157,4 +183,16 @@ products_l=new ArrayList<Products>(products);
         gb.execute();
     }
 
+
+
+
+    @Override
+    public void itemClicked(Products products) {
+
+    }
+
+    @Override
+    public void itemClicked(Brand brand) {
+
+    }
 }

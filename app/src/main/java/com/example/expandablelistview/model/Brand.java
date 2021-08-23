@@ -3,6 +3,12 @@ package com.example.expandablelistview.model;
 public class Brand {
     private String productBarnd;
     public boolean isExpanded;
+
+    public Brand(String productBarnd) {
+        this.productBarnd = productBarnd;
+        this.isExpanded=true;
+    }
+
     public String getProductBarnd() {
         return productBarnd;
     }
